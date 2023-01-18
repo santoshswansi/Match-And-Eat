@@ -1,0 +1,295 @@
+.container{
+  --top-div-height: min(75vh, 75vw);
+  --top-div-width: min(75vh, 75vw);
+  --middle-div-height: min(50vh, 50vw);
+  --middle-div-width: min(50vh, 50vw);
+  --bottom-div-height: min(25vh, 25vw);
+  --bottom-div-width: min(25vh, 25vw);
+  --div-border-size: min(1vh, 1vw);
+  --circle-diameter: min(5vh, 5vw);
+  --div-border-color: #3C6255;
+  --circle-background-color: #A6BB8D;
+  --circle-hover-bg-color: #EAE7B1;
+  --circle-hover-border-color: #61876E;
+  --container-width: min(100vh, 100vw);
+  --container-height: min(100vh, 100vw);
+}
+
+
+.container{
+  width: var(--container-width);
+  height: var(--container-height);
+  margin: auto;
+  display: flex;  
+  align-items: center;
+}
+
+.top, .middle, .bottom {
+  border: var(--div-border-size) solid var(--div-border-color);
+  margin: auto;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.top{
+  height: var(--top-div-height);
+  width: var(--top-div-width);
+}
+
+.middle{
+  height: var(--middle-div-height);
+  width: var(--middle-div-width);
+}
+
+.bottom{
+  height: var(--bottom-div-height);
+  width: var(--bottom-div-width);
+}
+
+.bottom-top-right, 
+.bottom-top-middle, 
+.bottom-top-left, 
+.bottom-left-middle, 
+.bottom-bottom-left, 
+.bottom-bottom-middle, 
+.bottom-bottom-right, 
+.bottom-right-middle,
+.middle-top-right,
+.middle-top-middle,
+.middle-top-left,
+.middle-left-middle,
+.middle-bottom-left,
+.middle-bottom-middle,
+.middle-bottom-right,
+.middle-right-middle,
+.top-top-right,
+.top-top-middle,
+.top-top-left,
+.top-left-middle,
+.top-bottom-left,
+.top-bottom-middle,
+.top-bottom-right,
+.top-right-middle{
+  position: absolute;
+  height: var(--circle-diameter);
+  width: var(--circle-diameter);
+  background-color: var(--circle-background-color);
+  border-width: var(--div-border-size);
+  border-style: solid;
+  border-color: var(--div-border-color);
+  border-radius: 50%;
+}
+
+.bottom-top-right,
+.middle-top-right,
+.top-top-right{
+  top: calc(0px - var(--div-border-size)/2 - var(--circle-diameter)/2);
+  right: calc(0px - var(--div-border-size)/2 - var(--circle-diameter)/2);
+}
+
+.bottom-top-middle,
+.middle-top-middle,
+.top-top-middle{
+  top: calc(0px - var(--div-border-size)/2 - var(--circle-diameter)/2);
+}
+
+.bottom-top-middle{
+  right: calc(var(--bottom-div-width)/2 - var(--circle-diameter)/2);
+}
+
+.middle-top-middle{
+  right: calc(var(--middle-div-width)/2 - var(--circle-diameter)/2);
+}
+
+.top-top-middle{
+  right: calc(var(--top-div-width)/2 - var(--circle-diameter)/2);
+}
+
+.bottom-top-left,
+.middle-top-left,
+.top-top-left {
+  top: calc(0px - var(--div-border-size)/2 - var(--circle-diameter)/2);
+  left: calc(0px - var(--div-border-size)/2 - var(--circle-diameter)/2);
+}
+
+.bottom-left-middle,
+.middle-left-middle,
+.top-left-middle{
+  left: calc(0px - var(--div-border-size)/2 - var(--circle-diameter)/2);
+}
+
+.bottom-left-middle{
+  top: calc(var(--bottom-div-height)/2 - var(--circle-diameter)/2);
+}
+
+.middle-left-middle{
+  top: calc(var(--middle-div-height)/2 - var(--circle-diameter)/2);
+}
+
+.top-left-middle{
+  top: calc(var(--top-div-height)/2 - var(--circle-diameter)/2);
+}
+
+.bottom-bottom-left,
+.middle-bottom-left,
+.top-bottom-left {
+  left: calc(0px - var(--div-border-size)/2 - var(--circle-diameter)/2);
+  bottom: calc(0px - var(--div-border-size)/2 - var(--circle-diameter)/2);
+}
+
+.bottom-bottom-middle,
+.middle-bottom-middle,
+.top-bottom-middle{
+  bottom: calc(0px - var(--div-border-size)/2 - var(--circle-diameter)/2);
+}
+
+.bottom-bottom-middle {
+  right: calc(var(--bottom-div-width)/2 - var(--circle-diameter)/2);
+}
+
+.middle-bottom-middle {
+   right: calc(var(--middle-div-width)/2 - var(--circle-diameter)/2);
+ }
+
+.top-bottom-middle {
+   right: calc(var(--top-div-width)/2 - var(--circle-diameter)/2);
+ }
+
+.bottom-bottom-right,
+.middle-bottom-right,
+.top-bottom-right {
+  bottom: calc(0px - var(--div-border-size)/2 - var(--circle-diameter)/2);
+  right: calc(0px - var(--div-border-size)/2 - var(--circle-diameter)/2);
+}
+
+.bottom-right-middle,
+.middle-right-middle,
+.top-right-middle{
+  right: calc(0px - var(--div-border-size)/2 - var(--circle-diameter)/2);
+}
+
+.bottom-right-middle{
+  top: calc(var(--bottom-div-height)/2 - var(--circle-diameter)/2);
+}
+
+.middle-right-middle{
+  top: calc(var(--middle-div-height)/2 - var(--circle-diameter)/2);
+}
+
+.top-right-middle{
+  top: calc(var(--top-div-height)/2 - var(--circle-diameter)/2);
+}
+
+.middle-bridge-top,
+.middle-bridge-left,
+.middle-bridge-bottom,
+.middle-bridge-right,
+.top-bridge-top,
+.top-bridge-left,
+.top-bridge-bottom,
+.top-bridge-right{
+  position: absolute;
+  background-color: var(--div-border-color);  
+}
+
+.middle-bridge-top,
+.middle-bridge-bottom{
+  right: calc(var(--middle-div-height)/2 + var(--div-border-size)/2);
+  height: calc((var(--middle-div-height) - var(--bottom-div-height))/2);
+  width: var(--div-border-size);
+}
+
+.middle-bridge-top{
+  top: calc(0px - var(--div-border-size)/2 - var(--circle-diameter)/2 + var(--div-border-size)*2 + var(--circle-diameter));
+}
+
+.middle-bridge-bottom {
+  bottom: calc(0px - var(--div-border-size)/2 - var(--circle-diameter)/2 + var(--div-border-size)*2 + var(--circle-diameter));
+}
+
+.middle-bridge-left,
+.middle-bridge-right {
+  top: calc(var(--middle-div-width)/2 + var(--div-border-size)/2);
+  width: calc((var(--middle-div-width) - var(--bottom-div-width))/2);
+  height: var(--div-border-size);
+}
+
+.middle-bridge-left {
+  left: calc(0px - var(--div-border-size)/2 - var(--circle-diameter)/2 + var(--div-border-size)*2 + var(--circle-diameter));
+}
+
+.middle-bridge-right {
+  right: calc(0px - var(--div-border-size)/2 - var(--circle-diameter)/2 + var(--div-border-size)*2 + var(--circle-diameter));
+}
+
+.top-bridge-top,
+.top-bridge-bottom {
+  right: calc(var(--top-div-height)/2 + var(--div-border-size)/2);
+  height: calc((var(--top-div-height) - var(--middle-div-height))/2);
+  width: var(--div-border-size);
+}
+
+.top-bridge-top {
+  top: calc(0px - var(--div-border-size)/2 - var(--circle-diameter)/2 + var(--div-border-size)*2 + var(--circle-diameter));
+}
+
+.top-bridge-bottom {
+  bottom: calc(0px - var(--div-border-size)/2 - var(--circle-diameter)/2 + var(--div-border-size)*2 + var(--circle-diameter));
+}
+
+.top-bridge-left,
+.top-bridge-right {
+  top: calc(var(--top-div-width)/2 + var(--div-border-size)/2);
+  width: calc((var(--top-div-width) - var(--middle-div-width))/2);
+  height: var(--div-border-size);
+}
+
+.top-bridge-left {
+  left: calc(0px - var(--div-border-size)/2 - var(--circle-diameter)/2 + var(--div-border-size)*2 + var(--circle-diameter));
+}
+
+.top-bridge-right {
+  right: calc(0px - var(--div-border-size)/2 - var(--circle-diameter)/2 + var(--div-border-size)*2 + var(--circle-diameter));
+}
+
+.hover{
+  background-color: var(--circle-hover-bg-color);
+  border-color: var(--circle-hover-border-color);
+  transform: scale(1.1);
+  transition: background 0.5s;
+}
+
+.star{
+  background-image: url('./assets/star.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-color: white;
+}
+
+.dollar{
+  background-image: url('./assets/dollar.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-color: black;
+}
+
+.zoomInZoomOut{
+  animation: zoomInZoomOutAnimation 1.5s infinite
+}
+
+@keyframes zoomInZoomOutAnimation {
+    0% {
+      transform: scale(1, 1);
+    }
+    
+    50% {
+      transform: scale(1.2, 1.2);
+    }
+    
+    100% {
+      transform: scale(1, 1);
+    }
+}
