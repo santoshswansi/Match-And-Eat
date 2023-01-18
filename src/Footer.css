@@ -4,12 +4,12 @@
 }
 
 .footer-container{
-  margin-top: 50vh;
-  height: 10vh;
+  margin-top: min(50vh, 400px);
+  height: min(10vh, 200px);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-size: 2.5vh;
+  font-size: min(2.5vh, 25px);
   font-family: Arial, Helvetica, sans-serif;
   color: var(--footer-font-color);
   background-color: var(--footer-bg-color);
@@ -23,5 +23,19 @@
 .footer-container a{
   color: var(--footer-font-color);
   text-decoration: none;
+}
+
+@media screen and (max-width: 950px){
+  .footer-container{
+    height: 15vh;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  .footer-container .link{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
