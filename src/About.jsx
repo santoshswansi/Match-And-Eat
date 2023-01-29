@@ -1,10 +1,10 @@
 import React from 'react'
 import './Tutorial.css'
 
-function Tutorial() {
+function About() {
   return (
     <div>Tutorial</div>
   )
 }
 
-export default Tutorial
+export default About

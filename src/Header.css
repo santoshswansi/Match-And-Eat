@@ -1,0 +1,44 @@
+.header-container{
+  --header-font-color: #FFF;
+  --background-color: #000;
+}
+
+
+.header-container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: min(10vh, 10vw, 100px);
+  padding: 0 10px;
+  color: var(--header-font-color);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: min(2.5vh, 2.5vw, 20px); 
+  font-weight: bolder;
+}
+
+.header-container img{
+  height: min(2.5vh, 2.5vw, 20px);
+  width: min(2.5vh, 2.5vw, 20px);
+}
+
+.header-container .about{
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: var(--header-font-color);
+  color: var(--background-color)
+}
+
+.header-container .about:hover{
+  transform: scale(1.02, 1.02);
+  cursor: pointer;
+}
+
+.header-logo{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: min(5vh, 5vw, 50px);
+  width: min(5vh, 5vw, 50px);
+  border-radius: 50%;
+  background-color: var(--header-font-color);
+}

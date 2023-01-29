@@ -1,4 +1,4 @@
-.container{
+.board-container, .button-container{
   --top-div-height: min(75vh, 75vw);
   --top-div-width: min(75vh, 75vw);
   --middle-div-height: min(50vh, 50vw);
@@ -11,14 +11,14 @@
   --circle-background-color: #A6BB8D;
   --circle-hover-bg-color: #EAE7B1;
   --circle-hover-border-color: #61876E;
-  --container-width: min(100vh, 100vw);
-  --container-height: min(100vh, 100vw);
+  --board-container-width: min(100vh, 100vw);
+  --board-container-height: min(100vh, 100vw);
 }
 
 
-.container{
-  width: var(--container-width);
-  height: var(--container-height);
+.board-container{
+  width: var(--board-container-width);
+  height: var(--board-container-height);
   margin: auto;
   display: flex;  
   align-items: center;
@@ -201,11 +201,13 @@
 }
 
 .middle-bridge-top{
-  top: calc(0px - var(--div-border-size)/2 - var(--circle-diameter)/2 + var(--div-border-size)*2 + var(--circle-diameter));
+  top: 0px;
+  z-index: -1;
 }
 
 .middle-bridge-bottom {
-  bottom: calc(0px - var(--div-border-size)/2 - var(--circle-diameter)/2 + var(--div-border-size)*2 + var(--circle-diameter));
+  bottom: 0px;
+  z-index: -1;
 }
 
 .middle-bridge-left,
@@ -216,11 +218,13 @@
 }
 
 .middle-bridge-left {
-  left: calc(0px - var(--div-border-size)/2 - var(--circle-diameter)/2 + var(--div-border-size)*2 + var(--circle-diameter));
+  left: 0px;
+  z-index: -1;
 }
 
 .middle-bridge-right {
-  right: calc(0px - var(--div-border-size)/2 - var(--circle-diameter)/2 + var(--div-border-size)*2 + var(--circle-diameter));
+  right: 0px;
+  z-index: -1;
 }
 
 .top-bridge-top,
@@ -231,11 +235,13 @@
 }
 
 .top-bridge-top {
-  top: calc(0px - var(--div-border-size)/2 - var(--circle-diameter)/2 + var(--div-border-size)*2 + var(--circle-diameter));
+  top: 0px;
+  z-index: -1;
 }
 
 .top-bridge-bottom {
-  bottom: calc(0px - var(--div-border-size)/2 - var(--circle-diameter)/2 + var(--div-border-size)*2 + var(--circle-diameter));
+  bottom: 0px;
+  z-index: -1;
 }
 
 .top-bridge-left,
@@ -246,11 +252,13 @@
 }
 
 .top-bridge-left {
-  left: calc(0px - var(--div-border-size)/2 - var(--circle-diameter)/2 + var(--div-border-size)*2 + var(--circle-diameter));
+  left: 0px;
+  z-index: -1;
 }
 
 .top-bridge-right {
-  right: calc(0px - var(--div-border-size)/2 - var(--circle-diameter)/2 + var(--div-border-size)*2 + var(--circle-diameter));
+  right: 0px;
+  z-index: -1;
 }
 
 .hover{
@@ -258,6 +266,7 @@
   border-color: var(--circle-hover-border-color);
   transform: scale(1.1);
   transition: background 0.5s;
+  cursor: pointer;
 }
 
 .star{
@@ -293,3 +302,36 @@
       transform: scale(1, 1);
     }
 }
+
+.button-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.button-container button{
+  padding: 10px 20px;
+  background-color: var(--background-color);
+  border: 2px solid var(--div-border-color);
+  border-radius: 5px; 
+  font-weight: bolder;
+  font-size: min(min(5vh, 5vw), 20px);
+  color: var(--div-border-color);
+}
+
+.button-container button:hover{
+  background-color: var(--div-border-color);
+  color: var(--background-color);
+  cursor: pointer;
+}
+
+.game-start-button-container{
+  transform: translateY(calc(0px - var(--board-container-height)/2 - 15px));
+}
+
+.game-start-board-container{
+  position: relative;
+  z-index: -1;
+  filter: blur(5px);
+} 
