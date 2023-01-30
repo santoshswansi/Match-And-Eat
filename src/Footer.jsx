@@ -8,7 +8,7 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons";
 function Footer({style: colorThemeFooter}) {
 
   return (
-    <div className="footer-container" style={colorThemeFooter}>
+    <div id="footer-container" className="footer-container" style={colorThemeFooter}>
       <p>
         <FontAwesomeIcon icon={faCopyright} /> 2022 Copyright Santosh Swansi
       </p>

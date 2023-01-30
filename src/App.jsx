@@ -31,6 +31,11 @@ export function App() {
     "--background-color": theme[colorThemeIdx]["backgroundColor"],
   }
 
+  const colorThemeAbout = {
+    "--background-color": theme[colorThemeIdx]["divBorderColor"],
+    "--font-color": theme[colorThemeIdx]["backgroundColor"],
+  };
+
   document.querySelector("body").style.backgroundColor = theme[colorThemeIdx]["backgroundColor"]
 
   return (
@@ -44,7 +49,7 @@ export function App() {
         draggable
         pauseOnHover
       />
-      <Header style={colorThemeHeader}/>
+      <Header style={colorThemeHeader} styleForAbout={colorThemeAbout}/>
       <Board style={colorThemeBoard}/>
       <Footer style={colorThemeFooter}/>
     </>

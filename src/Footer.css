@@ -31,11 +31,14 @@
   .footer-container{
     flex-direction: column;
     justify-content: space-evenly;
+    row-gap: min(2vh, 2vw);
+    padding: min(3.5vh, 3.5vw) 0;
   }
 
   .footer-container .link{
     display: flex;
     flex-direction: column;
     align-items: center;
+    row-gap: min(2vh, 2vw);
   }
 }

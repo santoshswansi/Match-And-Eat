@@ -13,6 +13,7 @@
   --circle-hover-border-color: #61876E;
   --board-container-width: min(100vh, 100vw);
   --board-container-height: min(100vh, 100vw);
+  --alpha: 0.4;
 }
 
 
@@ -274,7 +275,8 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  background-color: white;
+  background-color: var(--div-border-color);
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 5px 15px;
 }
 
 .dollar{
@@ -282,7 +284,8 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  background-color: black;
+  background-color: var(--div-border-color);
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 5px 15px;
 }
 
 .zoomInZoomOut{
@@ -311,13 +314,13 @@
 }
 
 .button-container button{
-  padding: 10px 20px;
+  padding: 5px 10px;
   background-color: var(--background-color);
   border: 2px solid var(--div-border-color);
   border-radius: 5px; 
-  font-weight: bolder;
-  font-size: min(min(5vh, 5vw), 20px);
+  font-size: min(4vh, 4vw);
   color: var(--div-border-color);
+  box-shadow: rgba(0, 0, 0, var(--alpha)) 0px 5px 15px;
 }
 
 .button-container button:hover{

@@ -1,0 +1,69 @@
+.about-container{
+  --background-color: #000;
+  --font-color: #FFF;
+}
+
+.about-container{
+  display: flex;  
+  position: fixed;
+  flex-direction: column;
+  justify-content: flex-start;
+  row-gap: min(6vh, 6vw);
+  height: 90vh;
+  width: 60vw;
+  position: absolute;
+  top: 5vh;
+  left: 20vw;
+  overflow: auto;
+  background-color: var(--background-color);
+  color: var(--font-color);
+  padding: min(2vh, 2vh) min(2vw, 2vw);
+  z-index: 2;
+  border-radius: 5px;
+  font-family: Arial, Helvetica, sans-serif;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 5px 15px;
+}
+
+.about-container > :nth-child(1){
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: min(10vh, 10vw);
+}
+
+.about-container > h1{
+  text-align: center;
+  font-size: min(5vh, 5vw);
+}
+
+.about-container > .about-question {
+  display: flex;
+  flex-direction: column;
+  row-gap: min(1vh, 1vw);
+}
+
+.about-container > div > h2{
+  font-size: min(3.5vh, 3.5vw);
+}
+
+.about-container > div > p {
+  font-size: min(2.8vh, 2.8vw);
+}
+
+.about-container > div > h2 {
+  font-size: min(4.5vh, 4.5vw);
+}
+.about-logo {
+  height: min(5vh, 5vw);
+  width: min(5vh, 5vw);
+}
+
+.about-close{
+  height: min(5vh, 5vw);
+  width: min(5vh, 5vw);
+}
+
+.about-close:hover{
+  transform: scale(1.1, 1.1);
+  cursor: pointer;
+}

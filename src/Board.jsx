@@ -144,7 +144,7 @@ export function Board({style: colorThemeBoard}) {
 
   return (
     <>
-      <div className={`board-container ${!isPlay && 'game-start-board-container'}`} style={colorThemeBoard}>
+      <div id="board-container" className={`board-container ${!isPlay && 'game-start-board-container'}`} style={colorThemeBoard}>
         <div className="top">
           {/* ========top circles start================== */}
           <div
@@ -394,7 +394,7 @@ export function Board({style: colorThemeBoard}) {
         </div>
       </div>
 
-      <div className={`button-container ${!isPlay && "game-start-button-container"}`} style={colorThemeBoard}>
+      <div id="button-container" className={`button-container ${!isPlay && "game-start-button-container"}`} style={colorThemeBoard}>
         <button onClick={handlePlay}>{isPlay ? "Restart" : "Start"}</button>
       </div>
     </>
